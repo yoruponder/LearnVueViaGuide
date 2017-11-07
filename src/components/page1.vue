@@ -8,7 +8,7 @@
     </div>
     <span v-on:click="showall">show</span>
     <p>{{showLen}}</p>
-    <child v-for="(item,idx) in list" :key="item.id" :item="item.a"></child>
+    <child v-for="item in list" :key="item.id" :item="item.a"></child>
     <my-component :data="num"></my-component>
   </div>
 </template>
