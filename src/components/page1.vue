@@ -7,22 +7,44 @@
       {{v.a}}
     </div>
     <span v-on:click="showall">show</span>
+    <p>{{showLen}}</p>
+    <!-- <list-data v-for="item in list" v-bind:key="item.id" v-bind:item="list"></list-data> -->
   </div>
 </template>
 
 <script>
+
+var child = {
+  props: ['item'],
+  template: '<div>{{ console.log(item) }}</div>'
+};
 export default {
   name: 'Page1',
-  methods:{
+
+  methods: {
     showall:function(){
       console.log(this)
     }
   },
+  created: function(){
+    //console.log($data)
+  },
+  // components: {
+  //   'list-data': child
+  // },
+  computed:{
+    showLen: function(){
+      let a = this.list.length;
+      //console.log(this);
+      return a
+    }
+  },
   data () {
+    console.log(this)
     return {
       msg: 'Welcome to page1',
       ss: new Date().toLocaleString(),
-      go: 1,
+      go: 0,
       list: [
         {a:111},
         {a:223},
@@ -30,6 +52,7 @@ export default {
       ]
     }
   }
+
 }
 </script>
 
