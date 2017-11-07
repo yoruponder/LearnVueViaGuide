@@ -8,30 +8,34 @@
     </div>
     <span v-on:click="showall">show</span>
     <p>{{showLen}}</p>
-    <!-- <list-data v-for="item in list" v-bind:key="item.id" v-bind:item="list"></list-data> -->
+    <child v-for="(item,idx) in list" :key="item.id" :item="item.a"></child>
+    <my-component :data="num"></my-component>
   </div>
 </template>
 
 <script>
+import myComponent from '_COMP_/new';
 
 var child = {
   props: ['item'],
-  template: '<div>{{ console.log(item) }}</div>'
+  template: '<div>{{ item }}</div>'
 };
+
 export default {
   name: 'Page1',
 
   methods: {
     showall:function(){
-      console.log(this)
+      this.$data.num++;
     }
   },
   created: function(){
     //console.log($data)
   },
-  // components: {
-  //   'list-data': child
-  // },
+  components: {
+    child,
+    myComponent
+  },
   computed:{
     showLen: function(){
       let a = this.list.length;
@@ -40,11 +44,12 @@ export default {
     }
   },
   data () {
-    console.log(this)
+    //console.log(this)
     return {
       msg: 'Welcome to page1',
       ss: new Date().toLocaleString(),
       go: 0,
+      num: 10,
       list: [
         {a:111},
         {a:223},
