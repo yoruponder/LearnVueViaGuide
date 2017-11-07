@@ -1,8 +1,10 @@
 <template>
   <div class="main-page">
-    <my-btn :txt="btn1" v-on:btnEvent="dosth" />  
-    <my-btn txt="page22" />  
-    <my-btn />
+    <p>{{num}}</p>
+    <my-btn :txt="0" v-on:btnEvent="dosth" />  
+    <my-btn :txt="0" v-on:btnEvent="dosth" />  
+    <my-btn :txt="232"/>
+    <router-link to="page1">page1</router-link>
   </div>
 </template>
 
@@ -21,12 +23,12 @@ export default {
   },
   methods: {
     dosth: function(){
-      this.btn1 += 1;
+      this.num += 1;
     }
   },
   data () {
     return {
-      btn1: 1
+      num: 0
     }
   }
 }

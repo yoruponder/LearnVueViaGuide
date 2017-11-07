@@ -1,5 +1,5 @@
 <template>
-  <div class="my-btn" @click="btnEvent">{{txt}}</div>
+  <div class="my-btn" @click="btnEvent">{{btnCnt}}</div>
 </template>
 
 <script>
@@ -12,13 +12,11 @@ export default {
     },
     methods: {
         btnEvent: function(){
-            console.log(this.txt);
+            this.btnCnt += 1;
             this.$emit('btnEvent');
         }
     },
     data: function(){
-        console.log(2)
-        console.log(this)
         return {
             btnCnt: this.txt
         }
