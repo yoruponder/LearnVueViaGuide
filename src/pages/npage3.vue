@@ -9,7 +9,7 @@ export default {
   name: 'Page1',
   data () {
     return {
-      msg: 'Welcome to page1'
+      msg: 'Welcome to page3'
     }
   }
 }

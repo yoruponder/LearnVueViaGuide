@@ -3,8 +3,10 @@
     <p>{{num}}</p>
     <my-btn :txt="0" v-on:btnEvent="dosth" />  
     <my-btn :txt="0" v-on:btnEvent="dosth" />  
-    <my-btn :txt="232"/>
+    <my-btn txt="sdfsdf"/>
     <router-link to="page1">page1</router-link>
+    <router-link to="page2">page2</router-link>
+    <router-link to="page3">page3</router-link>
   </div>
 </template>
 
