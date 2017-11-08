@@ -22,26 +22,26 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    { 
+    {
       path: '/',
       component: Idx
     },
     {
       path: '/page1',
-      component: ()=>{ 
-        return import(/* webpackChunkName: "page1" */ '_PAGE_/npage1')
+      component: ()=>{
+        return import('_PAGE_/npage1')
       }
     },
     {
       path: '/page2',
       component: () => {
-        return import(/* webpackChunkName: "page2" */ '_PAGE_/npage2')
+        return import('_PAGE_/npage2')
       }
     },
     {
       path: '/page3',
       component: () => {
-        return import(/* webpackChunkName: "page3" */ '_PAGE_/npage3')
+        return import('_PAGE_/npage3')
       }
     }
   ]
