@@ -1,12 +1,12 @@
 <template>
   <div class="main-page">
     <p>{{num}}</p>
-    <my-btn :txt="0" v-on:btnEvent="dosth" />  
-    <my-btn :txt="0" v-on:btnEvent="dosth" />  
+    <my-btn :txt="btn1name" @btnEvent="dosth"><p>asdasd</p></my-btn>
+    <my-btn :txt="0" @btnEvent="dosth" />  
     <my-btn txt="sdfsdf"/>
-    <router-link to="page1">page1</router-link>
-    <router-link to="page2">page2</router-link>
-    <router-link to="page3">page3</router-link>
+    <router-link to="page1">page12</router-link>
+    <router-link to="page2">page22</router-link>
+    <router-link to="page3">page33</router-link>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   computed: {
     btn1name: function(){
-      return ++this.btn1;
+      return this.num += 1;
     }
   },
   methods: {

@@ -1,5 +1,8 @@
 <template>
-  <div class="my-btn" @click="btnEvent">{{btnCnt}}</div>
+<div class="my-btn" @click="btnEvent">
+    <slot><p>dddd</p></slot>
+    <p>{{btnCnt}}</p>
+</div>
 </template>
 
 <script>
@@ -29,7 +32,6 @@ export default {
     display: inline-block;
     width: 200px;
     height: 200px;
-    line-height: 200px;
     background: #f00;
     color: #fff;
     text-align: center;
