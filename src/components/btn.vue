@@ -1,6 +1,6 @@
 <template>
-<div class="my-btn" @click="btnEvent">
-    <slot><p>dddd</p></slot>
+<div :class="['z']" @click="btnEvent">
+    <slot name="icon"></slot>
     <p>{{btnCnt}}</p>
 </div>
 </template>
@@ -21,7 +21,8 @@ export default {
     },
     data: function(){
         return {
-            btnCnt: this.txt
+            btnCnt: this.txt,
+            clkstate: 0,
         }
     }
 }

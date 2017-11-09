@@ -26,6 +26,10 @@ module.exports = {
       '@': resolve('src'),
       '_COMP_': resolve('src/components'),
       '_PAGE_': resolve('src/pages'),
+      '_CSS_': resolve('src/assets/css'),
+      '_IMG_': resolve('src/assets/image'),
+      '_CFG_': resolve('src/config'),
+      '_LIBS_': resolve('src/libs'),
     }
   },
   module: {

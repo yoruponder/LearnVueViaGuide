@@ -1,7 +1,9 @@
 <template>
   <div class="main-page">
     <p>{{num}}</p>
-    <my-btn :txt="btn1name" @btnEvent="dosth"><p>asdasd</p></my-btn>
+    <my-btn :txt="btn1name" @btnEvent="dosth">
+      <img slot="icon" src="/static/logo.png" style="width:20px;height:20px;"/>
+    </my-btn>
     <my-btn :txt="0" @btnEvent="dosth" />  
     <my-btn txt="sdfsdf"/>
     <router-link to="page1">page12</router-link>
