@@ -35,7 +35,6 @@ export default {
         console.log(res);
       });
     }
-
   },
   data () {
     return {

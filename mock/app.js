@@ -11,7 +11,7 @@ app.all('*', function(req, res, next) {
 });
 
 // 具体接口设置
-app.get('/test', function(req, res) {
+app.get('/api/test', function(req, res) {
     res.cookie('cs',1,{domain:'localhost'});
     res.send({ code: 200, data: 'bbb' });
 });
