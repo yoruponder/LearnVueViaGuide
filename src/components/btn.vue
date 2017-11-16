@@ -1,5 +1,5 @@
 <template>
-<div :class="['z']" @click="btnEvent">
+<div :class="['my-btn']" @click="btnEvent">
     <slot name="icon"></slot>
     <p>{{btnCnt}}</p>
 </div>

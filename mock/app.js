@@ -3,7 +3,7 @@ var app = express();
 
 // 设置跨域访问，方便开发
 app.all('*', function(req, res, next) {
-    res.header('Access-Control-Allow-Origin', 'http://w.dev.8591.com.tw');
+    res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
     res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -11,9 +11,9 @@ app.all('*', function(req, res, next) {
 });
 
 // 具体接口设置
-app.get('/api/test', function(req, res) {
-    res.cookie('cs',1,{domain:'8591.com.tw'});
-    res.send({ code: 200, data: 'http://ws.dev.8591.com.tw/img/banner.png' });
+app.get('/test', function(req, res) {
+    res.cookie('cs',1,{domain:'localhost'});
+    res.send({ code: 200, data: 'bbb' });
 });
 
 // 具体接口设置

@@ -9,6 +9,7 @@
     <router-link to="page1">page12</router-link>
     <router-link to="page2">page22</router-link>
     <router-link to="page3">page33</router-link>
+    <a href="javascript:;" @click="requestData">請求資源</a>
   </div>
 </template>
 
@@ -28,7 +29,13 @@ export default {
   methods: {
     dosth: function(){
       this.num += 1;
+    },
+    requestData(){
+      ajax.get('http://localhost:3000/api/test2').then((res)=>{
+        console.log(res);
+      });
     }
+
   },
   data () {
     return {
@@ -37,9 +44,5 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
 
 
