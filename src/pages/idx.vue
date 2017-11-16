@@ -25,7 +25,7 @@ export default {
     btn1name: function(){
       return this.num += 1;
     }
-  },
+  }, 
   methods: {
     dosth: function(){
       this.num += 1;
