@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <h1><router-link to="/">組件開發庫</router-link></h1>
     <router-view/>
   </div>
 </template>
 
 <script>
+import '_CSS_/reset.scss'
+
 export default {
   name: 'app'
 }

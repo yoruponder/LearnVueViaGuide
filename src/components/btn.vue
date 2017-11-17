@@ -16,7 +16,7 @@ export default {
     methods: {
         btnEvent: function(){
             this.btnCnt += 1;
-            this.$emit('btnEvent');
+            this.$emit('parentEvent',...[23,4]);
         }
     },
     data: function(){
