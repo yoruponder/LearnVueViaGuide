@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '_COMP_/HelloWorld'
-import Page1 from '_COMP_/Page1'
-import Idx from '_PAGE_/idx'
-import LoadingComp from '_COMP_/HelloWorld'
+// import Page1 from '_COMP_/Page1'
+import Index from '_PAGE_/index'
+// import LoadingComp from '_COMP_/HelloWorld'
 
 
 Vue.use(Router)
@@ -25,28 +25,28 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
-      component: Idx
+      path: '/:id?',
+      component: Index
     },
-    {
-      path: '/page1',
-      component: () => ({
-        component: import(/* webpackChunkName: "page1" */'_PAGE_/npage1'),
-        loading: LoadingComp,
-        delay: 0
-      })
-    },
-    {
-      path: '/page2',
-      component: () => {
-        return import(/* webpackChunkName: "page2" */'_PAGE_/npage2');
-      }
-    },
-    {
-      path: '/page3',
-      component: () => {
-        return import(/* webpackChunkName: "page3" */'_PAGE_/npage3');
-      }
-    }
+    // {
+    //   path: '/page1',
+    //   component: () => ({
+    //     component: import(/* webpackChunkName: "page1" */'_PAGE_/npage1'),
+    //     loading: LoadingComp,
+    //     delay: 0
+    //   })
+    // },
+    // {
+    //   path: '/page2',
+    //   component: () => {
+    //     return import(/* webpackChunkName: "page2" */'_PAGE_/npage2');
+    //   }
+    // },
+    // {
+    //   path: '/page3',
+    //   component: () => {
+    //     return import(/* webpackChunkName: "page3" */'_PAGE_/npage3');
+    //   }
+    // }
   ]
 })
