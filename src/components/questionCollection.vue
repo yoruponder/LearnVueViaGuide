@@ -17,9 +17,6 @@
         padding: 0 10px;
         background: $lgray;
         line-height: $comlh;
-        a{
-          color: $fc2;
-        }
       }
       .fa {
         margin-left: 10px;
@@ -33,7 +30,6 @@
         display: inline-block;
         margin: 0 5px 10px;
         width: 100px;
-        color: $fc2;
         * {
           vertical-align: top;
           line-height: 20px;

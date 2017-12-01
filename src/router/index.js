@@ -3,6 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '_COMP_/HelloWorld'
 // import Page1 from '_COMP_/Page1'
 import Index from '_PAGE_/index'
+import collection from '_PAGE_/collection'
 // import LoadingComp from '_COMP_/HelloWorld'
 
 
@@ -26,30 +27,27 @@ export default new Router({
   routes: [{
       path: '/',
       component: Index,
-      props: {
-        nid: 1
-      }
+      props: {nid: 1}
     },
     {
       path: '/100',
       component: Index,
-      props: {
-        nid: 2
-      }
+      props: {nid: 2}
     },
     {
       path: '/life',
       component: Index,
-      props: {
-        nid: 3
-      }
+      props: {nid: 3}
     },
     {
       path: '/notification',
       component: Index,
-      props: {
-        nid: 4
-      }
+      props: {nid: 4}
+    },
+    {
+      path: '/collection',
+      component: collection,
+      props: {nid: 4}
     },
     // {
     //   path: '/page1',
