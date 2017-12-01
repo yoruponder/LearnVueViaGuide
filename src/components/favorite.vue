@@ -43,12 +43,12 @@
 </style>
 
 <template>
-<div class="favorite" v-if="data.length">
+<div class="favorite" v-if="data != null">
   <h3 class="com-title"><a href="javascript:;"><i class="fa fa-heart"></i>我的最爱</a></h3>
   <div class="fav-box clearfix">
-    <a href="javascript:;">
-      <span>{v.collection_name}</span>
-      <span class="fa fa-close" onClick={ (e) => {this.delFavorite(e,v.id)} }></span>
+    <a v-for="(val,key) in data" :key="key" href="javascript:;">
+      <span>{{val.collection_name}}</span>
+      <span class="fa fa-close" @click="delFavorite(val.id)"></span>
     </a>
   </div>
 </div>
@@ -66,11 +66,13 @@ export default {
   methods: {
     getFavorite(){
       ajax.post(Api,{c:'user',a:'favorite',navigation_id:this.id}).then(res => {
-        console.log(res)
         if(res.status){
-
+          this.data = res.data;
         }
       })
+    },
+    delFavorite(id){
+      console.log(id)
     }
   },
   beforeMount: function(){

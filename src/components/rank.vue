@@ -89,7 +89,6 @@ export default {
   methods: {
     getRank() {
       ajax.post(Api, { c: "index", a: "rank" }).then(res => {
-        console.log(res);
         if (res.status) {
           this.data = res.data;
         }

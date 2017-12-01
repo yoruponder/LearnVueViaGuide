@@ -57,8 +57,7 @@
     li {
       float: left;
     }
-    li:hover,
-    .active {
+    li:hover,.active {
       background: #279005;
     }
   }
@@ -78,10 +77,10 @@
     </div>
     <div class="head-nav">
         <ul class="page-cnt clearfix">
-            <li class=""><a to="/">8591宝物交易网</a></li>
-            <li class=""><a to="/100">100装潢网</a></li>
-            <li class=""><a to="/life">客服充电站</a></li>
-            <li class=""><a to="/notification">通知事项</a></li>
+            <router-link tag="li" to="/" exact-active-class="active"><a>8591宝物交易网</a></router-link>
+            <router-link tag="li" to="/100" exact-active-class="active"><a>100室內設計</a></router-link>
+            <router-link tag="li" to="/life" exact-active-class="active"><a>客服充电站</a></router-link>
+            <router-link tag="li" to="/notification" exact-active-class="active"><a>通知事项</a></router-link>
         </ul>
     </div>
 </div>

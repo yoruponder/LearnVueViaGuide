@@ -23,10 +23,33 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  routes: [
+  routes: [{
+      path: '/',
+      component: Index,
+      props: {
+        nid: 1
+      }
+    },
     {
-      path: '/:id?',
-      component: Index
+      path: '/100',
+      component: Index,
+      props: {
+        nid: 2
+      }
+    },
+    {
+      path: '/life',
+      component: Index,
+      props: {
+        nid: 3
+      }
+    },
+    {
+      path: '/notification',
+      component: Index,
+      props: {
+        nid: 4
+      }
     },
     // {
     //   path: '/page1',
